@@ -11,7 +11,7 @@ import io.rong.imlib.model.Conversation;
 /**
  * Created by Jan on 10/21/2015.
  */
-public class ConversationListActivity extends FragmentActivity {
+public class ConversationListActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

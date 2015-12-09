@@ -1,1 +1,1 @@
-include ':app', ':IMKit', ':widget'
+include ':app', ':IMKit', ':Lego', 'Volley'

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <chat.mumu.widget.SlideTabPager
+    <chat.mumu.lego.widget.SlideTabPager
         android:id="@+id/slideTabPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
@@ -24,6 +24,6 @@
             android:padding="3dp"
             android:tabStripEnabled="false" >
         </TabWidget>
-    </chat.mumu.widget.SlideTabPager>
+    </chat.mumu.lego.widget.SlideTabPager>
 
 </LinearLayout>

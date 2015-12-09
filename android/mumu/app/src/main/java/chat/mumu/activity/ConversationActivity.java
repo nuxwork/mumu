@@ -14,7 +14,7 @@ import io.rong.imlib.model.Conversation;
 /**
  * Created by Jan on 10/20/2015.
  */
-public class ConversationActivity extends FragmentActivity {
+public class ConversationActivity extends BaseActivity {
 
     /**
      * 目标 Id

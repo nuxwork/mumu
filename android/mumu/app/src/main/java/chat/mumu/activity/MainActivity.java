@@ -12,13 +12,19 @@ import io.rong.imkit.RongIM;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.UserInfo;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_main);
 
+        rongIM();
+    }
+
+
+
+    void rongIM(){
         RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
 
             @Override
@@ -29,18 +35,19 @@ public class MainActivity extends AppCompatActivity {
 
         }, true);
 
-        String token = "DF3Qy1rqxejNdOG5UiOTPwIdlv+4aA3Wom5Oa0mOqyCIdmoBlRs4Ub6Ncf9PrmWZOPpVqyDzMHWt0T7P7nsYMw==";
-
+        String token = "bHL8xfQwAZczXrYn200IvGsHEzGpwWKPzZuUJK9DqItW2hJI4/oCJ6SvCa5uPHNiYEggAxe6T6fZv2byPN54eyyQ57+ebcd+llW2DwIlDQrO+cEQSHP0sw==";
         /**
-         * IMKit SDK调用第二步 
+         * IMKit SDK调用第二步
          *
-         * 建立与服务器的连接 
+         * 建立与服务器的连接
          *
          */
         RongIM.connect(token, new RongIMClient.ConnectCallback() {
             @Override
             public void onTokenIncorrect() {
+                Log.e("MainActivity", "——onTokenIncorrect— -");
                 //Connect Token 失效的状态处理，需要重新获取 Token
+                Toast.makeText(MainActivity.this, "onTokenIncorrect", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -48,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("MainActivity", "——onSuccess— -" + userId);
                 Toast.makeText(MainActivity.this, "connect success", Toast.LENGTH_SHORT).show();
 
-                startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                startActivity(new Intent(MainActivity.this, WelcomeActivity.class));
                 finish();
             }
 
@@ -62,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
 
     public UserInfo findUserById(String userId) {
         UserInfo user = null;
-        if("123".equals(userId)){
-            user = new UserInfo(userId, "abcd", Uri.parse("http://v1.qzone.cc/avatar/201308/22/10/36/521579394f4bb419.jpg!200x200.jpg"));
+        if("5666f8f960b215d620fdd6f3".equals(userId)){
+            user = new UserInfo(userId, "1", Uri.parse("http://v1.qzone.cc/avatar/201512/08/22/58/5666f01d7d9aa342.jpg!200x200.jpg"));
         }else if("1234".equals(userId)){
             user = new UserInfo(userId, "abc", Uri.parse("http://www.qq1234.org/uploads/allimg/140610/3_140610105824_9.jpg"));
         }else if("1".equals(userId)){

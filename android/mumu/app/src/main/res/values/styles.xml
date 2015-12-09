@@ -3,6 +3,35 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+        <item name="android:editTextStyle">@style/EditTextDefault</item>
+        <item name="android:buttonStyle">@style/ButtonDefault</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppWelcomeTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@mipmap/pic_index_background</item>
+    </style>
+
+    <style name="ButtonDefault" parent="Widget.AppCompat.Button">
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:textSize">@dimen/button_default_text_size</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">@drawable/common_btn_selector</item>
+    </style>
+
+    <style name="EditTextDefault" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">@dimen/edittext_default_text_size</item>
+        <item name="android:paddingTop">@dimen/gap3</item>
+        <item name="android:paddingBottom">@dimen/gap3</item>
+        <item name="android:paddingLeft">@dimen/gap2</item>
+        <item name="android:paddingRight">@dimen/gap2</item>
+        <item name="android:textCursorDrawable">@drawable/common_edt_cursor_slector</item>
+        <item name="android:textColorHint">#CCCCCC</item>
+        <item name="android:textColor">#373737</item>
+        <item name="android:background">@drawable/common_edt_bg_selector</item>
     </style>
 
 </resources>

@@ -1,6 +1,5 @@
 package chat.mumu.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +10,7 @@ import io.rong.imkit.RongIM;
 /**
  * Created by Jan on 11/24/2015.
  */
-public class UserInfoActivity extends Activity implements View.OnClickListener {
+public class UserInfoActivity extends BaseActivity implements View.OnClickListener {
     private Button mBtnChat;
 
     @Override

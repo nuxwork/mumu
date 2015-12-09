@@ -1,17 +1,17 @@
 package chat.mumu.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import chat.mumu.R;
 import chat.mumu.adapter.HomeTabAdapter;
 import chat.mumu.adapter.HomeTabPagerAdapter;
-import chat.mumu.widget.SlideTabPager;
+import chat.mumu.lego.activity.ActivityStack;
+import chat.mumu.lego.widget.SlideTabPager;
 
 /**
  * Created by Jan on 10/20/2015.
  */
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends BaseActivity {
 
     private SlideTabPager		mSlideTabPager;
 
